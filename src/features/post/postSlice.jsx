@@ -81,6 +81,7 @@ export const createPost =
         image: imgUrl,
       });
       dispatch(slice.actions.createPostSuccess(response.data));
+      toast.success("Post success!");
     } catch (error) {
       dispatch(slice.actions.hasError(error.message));
     }
